@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*a medida caixa seja apartir da bordar*/
+}
+  
+body {
+    /*PRIMEIRA OPÇÃO */
+    /*background-image: url(../img/bg-desktop.jpg);
+    background-repeat: no-repeat; /*tirar repetição da imagem*/
+    /*background-position: top center; /*posição, colocar imagem no centro X e Y*/
+    /*9background-size: cover; /*para cobrir toda area disponivel*/
+  
+    /* SEGUNDA OPÇÃO*/
+    /*background: color image repeat position/size;*/
+    background: url(../img/bg-desktop.jpg)no-repeat top center/cover;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color:  rgb(255, 255, 255);
+}
+
+#container {
+    /*width: largura*/
+    /*height: altura*/
+    width: 368px;
+    margin: 56px auto; /*centro*/
+    /*border: largura tipo da borda color;*/
+}
+
+  /*profile*/
+#profile {
+    text-align: center; /*posicao do conteudo*/
+    padding: 24px;
+}
+
+#profile img {
+    border-radius: 100%; /*deixar a borda arredondada*/
+    border: 3px solid black;
+    height: 100px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 112px; /*largura*/
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/*switch*/
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: rgb(3, 3, 3)  no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    /*deixar em camadas*/
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.87);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/*lista *//*gap: colocar espaços entre os elementos*/
+
+ul {
+    list-style: none; /*estilo da lista: nenhum */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+  
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+  
+    transition: background 0.2s; /*transição*/
+}
+
+/*pseudo-selector*/
+
+ul li a:hover {
+    background: rgba(224, 91, 224, 0.205);
+    border: 1.5px solid var(--text-color);
+}
+
+
+
+/*sobre */
+#sobre-img {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+#sobre-img img {
+    border-radius: 10%;
+    text-align: right; /*posicao do conteudo*/
+    margin-top: 4rem;
+    margin-left: 3.3rem;
+    height: 150px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 150px; /*largura*/
+}
+
+#sobre-img p {
+    text-align: left; /*posicao do conteudo*/
+    margin: 20px;
+    margin-top: 4rem;
+    height: 150px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 270px; /*largura*/
+}
+
+#sobre-apro{
+    margin: 8px;
+    display: flex;
+    justify-content: center;    
+}
+
+#aprofundar {
+
+    text-align: center;
+    height: 120px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 440px; /*largura*/
+    
+}
+
+#sobre-img2{
+    margin: 8px;
+    display: flex;
+    justify-content: center; 
+}
+
+#sobre-img2 img {
+    border-radius: 10%;
+    text-align: right; /*posicao do conteudo*/
+    margin-top: 1.5rem;
+    height: 150px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 150px; /*largura*/
+}
+
+#sobre-img2 p {
+    text-align: right; /*posicao do conteudo*/
+    margin: 1.5rem;
+    height: 150px; /*altura*/
+    /*display: block; - ocupar toda a linha*/
+    width: 250px; /*largura*/
+}
+
+/*botao sobre*/
+nav #button-sob {
+    width: 450px;
+    margin: auto;
+    list-style: none; /*estilo da lista: nenhum */
+    justify-content: center;
+    font-weight: 500;  
+    transition: background 0.2s; /*transição*/
+}
+
+/*pseudo-selector*/
+#button-sob ul li a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1.5px solid black;
+}
+
+/*certificados*/
+.certific {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 980px;
+    margin: 90px;
+    grid-gap: 80px 40px;
+}
+
+#cert-h1 {
+    margin: 40px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 40px;
+    box-shadow: 6px 6px 10px #c470fc;
+}
+
+.user {
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+figcaption {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* social links */
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2;
+    border-radius: 50%;
+      
+}
+
+#social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    padding:24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+@media (max-width: 760px) {
+    
+    .certific {
+        display: block;
+        max-width: 650px;
+        margin: 50px;
+    }
+
+    #cert-h1 {
+        margin: 30px;
+    }
+
+    .card {
+        margin: 50px;
+       padding: 30px;
+       box-shadow: 4px 4px 10px #c470fc;
+    }
+
+    .user {
+        width: 250px;
+        height: 150px;
+    } 
+
+    figcaption {
+        margin-top: 10px;
+    }
+
+}
